@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Elementi HTML</title>
+    </head>
+    <body>
+<h2> Elementi HTML </h2>
+<p> Le Tabelle: </p>
+<table> 
+    <!-- Le tabelle sono fatte da righe (table rows i.e. tr) ed ogni riga
+    contiene dei dati (table data i.e. td)
+    I titoli delle colonne (nomi degli attributi) sono in evidenza 
+    (table highlights i.e. th)
+    -->
+    <tr>
+        <th>Nome</th> <th> Cognome</th> <th> Email </th>
+    </tr>
+    <tr>
+        <td>Maria</td> <td> Verdi</td> <td> mariaverdi@gmail.com</td>
+    </tr>
+    <tr>
+        <td>Giovanni</td> <td> Gialli </td> <td> giovannigialli@gmail.com</td>
+    </tr>
+</table>
+<p> I form e gli input:</p>
+<form>
+    <input type="text" placeholder="Inserire Nome"> <br>
+    <input type="password" placeholde="password"> <br>
+    <textarea cols="30" rows="10"></textarea> <br>
+    <input type="checkbox"> <br>
+    <select>
+    <option value="">Olio</option>
+    <option value="">Sale</option>
+    <option value="">Pepe</option>
+    </select>
+    
+    <br>
+    
+    <input type="color"> <br>
+    <input type="date"><br>
+    <input type="number"><br>
+    <input type="submit">
+
+</form>
+<p>
+    I form permettono all'utente di inserire dell'input.
+    Ovviamente l'input dovrà essere elaborato successivamente dal server.
+    attraverso serviceNow i from verranno gestiti in maniera automatica,
+    pertanto non rientra negli scopi del corso approfondire come i dati vengano
+    passati ed elaborati dal server.
+</p>
+<h3>Lo stile CSS</h3>
+
+<!--Gli elementi HTML possono essere customizzati a livello di style-->
+<!--Il modo più immediato di customizzare un elemento consiste nella scrittura "inline"-->
+<p>Lo stile inline:</p>
+<p style="color: red; background-color: burlywood; border: 1px solid blue">Ciao a tutti, utilizzo uno stile inline per cambiare colore</p>
+<!--
+
+    le principlai regole CSS che possiamo usare sono
+    color. colore del testo,
+    background-color: colore di sfondo
+    border: spessore, stile e colore del bordo es. border: 1px solid blue
+    border-radius: arrotondamento del bordo
+    font-size: dimensione del font
+    margin: distanza che l'elemento manterrà dagli altri
+    padding: margine all'interno dell'elemento
+-->    
+<span style="border: 2px solid black"> No Margin, No padding</span> <br>
+<span style="border: 2px solid black"> No Margin, No padding</span><br>
+<span style="border: 2px solid black; margin: 10px"> Yes Margin, No padding</span> <br>
+<span style="border: 2px solid black; padding: 10px;"> No Margin, Ye padding</span>
+<span style="border: 2px solid black; padding: 10px; margin: 50px"> Yes Margin, Yes padding</span>
+
+<p>
+    Notiamo che ogni elemento deve essere stilato individualmente anche più elementi con lo stesso stile lo devono ripetere.
+</p>
+<p>
+    Il linguaggio HTML ci viene incontro, avendo due attributi speciali che possono essere usati per customaizzare
+    gli elementi
+</p>
+<ul>
+    <li> classi: <b>class</b></li>
+    <li> identificatori: <b>id</b></li>
+</ul>
+<p>
+    Si possono caratterizzare gli elementi con gli attributi precedenti e definire una sola volta lo stile che devono avere
+</p>
+
+<style>
+    h4 {
+        color:blueviolet;
+     }
+
+
+</style>
+<h4> Ciao </h4>
+
+<!-- da questo momento in poi tutti gli h4 saranno viola-->
+
+<style>
+.testo-verde{
+    color: green;
+    font-size: 20px;
+}
+#bordi-arrotondati{border: 2px solid black;
+    border-radius: 5px;}
+</style>
+<p>Vorrei che tutti i seguenti paragrafi siano verdi, ad eccezione dell'ultimo:</p>
+<p class="testo-verde"> questo è il primo paragrafo</p>
+<p class="testo-verde"> questo è il secondo paragrafo</p>
+<p> questo è l'ultimo</p>
+
+<p>le regole che definiscono le classi sono identificate con un punto (.).</p>
+<p>allo stesso modo possono essere identificati da un ID. l'id può essere associato a una regola CSS.</p>
+
+<div id="bordi-arrotondati">Ciao</div>
+
+
+<!-- alla riga 102 abbiamo dichiarato una classe e abbiamo detto che ha il testo verde, successivamente la richiamiamo con <p class="testo-verde"
+così facendo dichiariamo quel font per ogni paragrafo che ci serve. Gli id servono per caratterizzare un solo elemento-->
+<!-- Gli id possono essere assegnati a un solo elemento, mentre la classe indica proprio una classe di elementi e ci sono più elementi che possono avere la stessa classe-->
+
+</body>
+</html>

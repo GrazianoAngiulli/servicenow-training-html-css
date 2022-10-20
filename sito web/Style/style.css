@@ -1,0 +1,85 @@
+/* Il CSS è un formato in cui vengono definiti gli stili.
+La codifica è la seguente
+
+
+Selettore {
+    nome-regola-1: valore-regola-1
+    nome-regola-2: valore-regola2
+    .....
+}
+
+Il SELETTORE  indica uno o più elementi HTML all'interno della pagina in cui il foglio di stile CSS sarà linkato.
+
+
+Il selettore può assumere diverse forme a seconda degli elementi che si vogliono "selezionare"
+
+Ad esempio: con il punto (.) si indica il nome di una classe:
+
+
+HTML:
+<div class="bottone-colorato"> click me </div>
+
+CSS:
+.bottone-colorato {
+    regola-1: val-1
+    ...
+}
+
+
+ESEMPIO 2: con il cancelletto si seleziona l'elemento con quel determinato ID
+HTML:
+<p id="importante">...</p>
+
+CSS (si intende il file CSS)
+#importante {
+    font-size: 30px;
+    ...
+}
+*/
+
+
+.quadrato-nero {
+    width: 20px;
+    height: 20px;
+    background-color: black; /* adesso facciamo il linking andando all'interno dell'head scrivendo nell'HTML <link href="style/style.css" rel="stylesheet"/>*/
+}
+
+.cerchio-blu {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: blue;
+    
+}
+
+
+/*Se invece utilizzo il nome di un tag HTML COME SELETTORE, TUTTI GLI ELEMENTI APPARTENETI A QUEL TAG SARANNO IMPATTATI */
+div {
+    margin: 15px;
+}
+
+/*
+una piccola chicca: passare con il mouse sopra l'elemento
+*/
+
+#pseudo-bottone {
+    border: 2px solid black;
+    width: 80px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 5px;
+/* c'è una proprietà speciale che permette di aggiungere transizioni quando
+le proprietà cambiano*/
+transition: all 2s linear;
+}
+
+
+/* In CSS è possibile definire un comportamento diverso quando il cursore
+viene spostato sull'elemento*/
+
+#pseudo-bottone:hover{
+     /* questo può sovrascrivere tutte le regole scritte nell'altro #pseudo-bottone*/
+background-color:black;
+color: white;
+}
